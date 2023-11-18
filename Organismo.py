@@ -5,4 +5,4 @@ class Organismo:
         self.Vida = Vida
         self.Energia = Energia
         self.Velocidad = Velocidad
-        self.Sexo = Sexo 
+        self.Sexo = Sexo
