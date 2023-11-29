@@ -1,7 +1,8 @@
 import pygame
 import sys
 from pygame.locals import *
-from Ambiente import Ambiente 
+from Ambiente import Ambiente
+from Organismo import Organismo 
 from random import randint
 
 pygame.init()
@@ -39,6 +40,8 @@ Escen_Panta = [
 EvalMar = False
 
 reloj = pygame.time.Clock() 
+
+ambiente.posicion_tiburon=[0,0,100,50,5,"M"] #x, y, Vida, Energia, Velocidad, Sexo
 
 movimientos = {0: (0, -1),  # Arriba
                1: (0, 1),   # Abajo
@@ -80,5 +83,9 @@ while True:
 
     Pantalla.blit(imagen_Tiburon, (ambiente.posicion_tiburon[0] * Anch_Sprite, ambiente.posicion_tiburon[1] * Alt_Sprite))
 
+   
+    reloj.tick(4)
+   
+
     pygame.display.flip()
-    reloj.tick(5)
+    
